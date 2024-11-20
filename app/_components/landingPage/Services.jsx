@@ -5,8 +5,8 @@ export default function Services() {
 
     const servicesData = [
         {
-          title: "AI-Powered Health Monitoring",
-          description: "Track your health with AI insights, monitor vitals daily, and stay updated about potential risks in real-time.",
+          title: "AI-Powered Health Analysis",
+          description: "Use AI to analyze your health data and provide personalized insights for better health management.",
           icon: "/sampleIcon.svg",
         },
         {
