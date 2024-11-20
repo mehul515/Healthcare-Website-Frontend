@@ -49,7 +49,7 @@ export default function Services() {
                         </p>
                     </div>
 
-                    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-8 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
                         {servicesData.map((item, index) => {
                             return (
                                 <div className="block rounded-xl bg-[#E4F7F7] border-secondary border-[2px] p-8 shadow-xl">
