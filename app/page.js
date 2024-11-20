@@ -1,10 +1,11 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Hero from "./_components/landingPage/Hero";
 
 export default function Home() {
   return (
     <div>
-      <h2>Integrated Healthcare Platform</h2>
-      <h3>Final Year Project 2025</h3>
-    </div>
+      <Hero/>
+    </div> 
   );
 }
