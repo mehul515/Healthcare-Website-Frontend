@@ -27,7 +27,7 @@ function Hero() {
           quidem quam repellat.
         </p>
 
-        <Button className="mt-10">Eplore Now</Button>
+        <Button className="mt-10">Eplore Now pls</Button>
       </div>
     </div>
   </div>
