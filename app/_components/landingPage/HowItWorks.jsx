@@ -41,7 +41,7 @@ const HowItWorks = () => {
                             {
                                 stepsData.map((item, index) => {
                                     return (
-                                        <div className="flex items-start text-[15px] font-">
+                                        <div key={index} className="flex items-start text-[15px] font-">
                                             <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-primary text-white font-bold rounded-full">
                                                 {index+1}
                                             </div>
