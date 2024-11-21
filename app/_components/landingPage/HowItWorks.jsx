@@ -19,7 +19,7 @@ const HowItWorks = () => {
 
 
     return (
-        <section className="bg-gray-50 py-12">
+        <section className="bg-gray-50 py-12 border-2 rounded-3xl mt-10 mb-6">
             <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8">
                 {/* Centered Heading */}
                 <div className="text-center">
@@ -61,7 +61,7 @@ const HowItWorks = () => {
                     {/* Right Side: Image */}
                     <div className="hidden lg:flex lg:w-[45%] items-center justify-center">
                         <img
-                            src="/hero.png"
+                            src="/LandingPage/hero.png"
                             alt="Certified Team"
                             className="rounded-lg"
                         />

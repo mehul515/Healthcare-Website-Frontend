@@ -7,32 +7,32 @@ export default function Services() {
         {
           title: "AI-Powered Health Analysis",
           description: "Use AI to analyze your health data and provide personalized insights for better health management.",
-          icon: "/sampleIcon.svg",
+          icon: "/LandingPage/Services/1.svg",
         },
         {
           title: "Doctor Appointment Booking",
           description: "Book appointments with doctors quickly based on their specialty and availability to meet your health needs.",
-          icon: "/sampleIcon.svg",
+          icon: "/LandingPage/Services/2.svg",
         },
         {
           title: "Caregiver Booking",
           description: "Find and book experienced caregivers to assist with your daily needs and provide essential support during recovery.",
-          icon: "/sampleIcon.svg",
+          icon: "/LandingPage/Services/3.svg",
         },
         {
           title: "Personalized Care Assistance",
           description: "Get detailed care plans made just for you to meet your health goals and manage your condition effectively.",
-          icon: "/sampleIcon.svg",
+          icon: "/LandingPage/Services/4.svg",
         },
         {
           title: "Virtual Health Consultations",
           description: "Talk to expert doctors online and get trusted advice from the comfort of your home at a time that works best.",
-          icon: "/sampleIcon.svg",
+          icon: "/LandingPage/Services/5.svg",
         },
         {
           title: "Health Data Analytics",
           description: "View and understand your health data better, helping you make smarter choices for a healthier lifestyle.",
-          icon: "/sampleIcon.svg",
+          icon: "/LandingPage/Services/6.svg",
         },
       ];
       
@@ -41,20 +41,20 @@ export default function Services() {
         <div>
             <section className="font-medium">
                 <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-                    <div className="mx-auto max-w-lg text-center">
-                        <h2 className="text-3xl font-bold sm:text-4xl text-gray-700">Top <span className='text-primary'>Services</span> We Provide</h2>
+                    <div className="mx-auto text-center">
+                        <h2 className="text-3xl font-bold sm:text-4xl text-gray-700 mb-4">Top <span className='text-primary'>Services</span> We Provide</h2>
 
-                        <p className="mt-4 text-gray-600">
+                        <p className="text-gray-600 hidden md:block w-[70%] mx-auto text-center font-medium">
                         Experience the best in healthcare with our wide range of services, including expert consultations, AI-driven solutions, and dedicated caregiver support.
                         </p>
                     </div>
 
-                    <div className="mt-8 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-10 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
                         {servicesData.map((item, index) => {
                             return (
-                                <div className="block rounded-xl bg-gray-100 border-[#A4DBDC] border-[2px] p-8 shadow-xl">
+                                <div className="block rounded-xl bg-gray-100 border-2 p-8 shadow-xl">
                                     <Image
-                                        src={"/sampleIcon.svg"}
+                                        src={item.icon}
                                         width={60}
                                         height={60}
                                         alt='Icon'
