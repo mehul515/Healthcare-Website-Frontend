@@ -52,7 +52,7 @@ export default function Services() {
                     <div className="mt-10 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
                         {servicesData.map((item, index) => {
                             return (
-                                <div className="block rounded-xl bg-gray-100 border-2 p-8 shadow-xl">
+                                <div key={index} className="block rounded-xl bg-gray-100 border-2 p-8 shadow-xl">
                                     <Image
                                         src={item.icon}
                                         width={60}

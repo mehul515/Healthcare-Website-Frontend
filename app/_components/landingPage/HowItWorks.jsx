@@ -19,8 +19,10 @@ const HowItWorks = () => {
 
 
     return (
-        <section className="bg-gray-50 py-12 border-2 rounded-3xl mt-10 mb-6">
-            <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8">
+        <section className="  mt-10 mb-6">
+            <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8 bg-gray-50 py-12 border-2 rounded-3xl">
+
+
                 {/* Centered Heading */}
                 <div className="text-center">
                     <h2 className="text-3xl font-bold sm:text-4xl mb-4 text-gray-700">

@@ -41,7 +41,6 @@ export default function Testimonials() {
                     <p className="text-gray-600 hidden md:block w-[70%] mx-auto text-center font-medium">
                     Discover why our platform is trusted by users for reliable healthcare services and the care they received.
                     </p>
-                    <p></p>
 
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-x-20 gap-y-14 mt-10">
                         {
