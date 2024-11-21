@@ -42,7 +42,7 @@ export default function Services() {
             <section className="font-medium">
                 <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
                     <div className="mx-auto max-w-lg text-center">
-                        <h2 className="text-3xl font-bold sm:text-4xl">Top <span className='text-primary'>Services</span> We Provide</h2>
+                        <h2 className="text-3xl font-bold sm:text-4xl text-gray-700">Top <span className='text-primary'>Services</span> We Provide</h2>
 
                         <p className="mt-4 text-gray-600">
                         Experience the best in healthcare with our wide range of services, including expert consultations, AI-driven solutions, and dedicated caregiver support.
@@ -52,7 +52,7 @@ export default function Services() {
                     <div className="mt-8 grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
                         {servicesData.map((item, index) => {
                             return (
-                                <div className="block rounded-xl bg-[#E4F7F7] border-secondary border-[2px] p-8 shadow-xl">
+                                <div className="block rounded-xl bg-gray-100 border-[#A4DBDC] border-[2px] p-8 shadow-xl">
                                     <Image
                                         src={"/sampleIcon.svg"}
                                         width={60}

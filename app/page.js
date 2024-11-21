@@ -1,4 +1,5 @@
 import Hero from "./_components/landingPage/Hero";
+import HowItWorks from "./_components/landingPage/HowItWorks";
 import Services from "./_components/landingPage/Services";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Hero/>
       <Services/>
+      <HowItWorks/>
     </div> 
   );
 }
