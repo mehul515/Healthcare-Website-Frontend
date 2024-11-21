@@ -24,7 +24,7 @@ const HowItWorks = () => {
                 {/* Centered Heading */}
                 <div className="text-center">
                     <h2 className="text-3xl font-bold sm:text-4xl mb-4 text-gray-700">
-                        How <span className="text-primary">our platform</span> works
+                        How <span className="text-primary">Our Platform</span> Works
                     </h2>
                     <p className="text-gray-600 hidden md:block w-[70%] mx-auto text-center font-medium">
                     Navigate through our platform seamlessly by following these steps and connect with caregivers, consult doctors, and access tailored healthcare services.
