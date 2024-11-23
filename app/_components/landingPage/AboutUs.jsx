@@ -38,7 +38,7 @@ const AboutUs = () => {
             and every treatment plan is tailored to your unique
           </p>
 
-          <Button className="px-6 py-3 text-lg">Learn more about us</Button>
+          <Button>Learn more about us</Button>
         </div>
       </div>
     </section>

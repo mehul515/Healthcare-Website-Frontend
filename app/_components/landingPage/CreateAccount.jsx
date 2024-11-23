@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const CreateAccount = () => {
     return (
@@ -27,7 +28,9 @@ const CreateAccount = () => {
                         Easily book doctor appointments and connect with trusted caregivers for personalized health and recovery support. Sign up now to get started on your journey to better health                    
                     </p>
 
-                    <Button className="px-6 py-3 text-lg">Create Your Account</Button>
+                    <Link href={"/signup"}>
+                    <Button>Create Your Account</Button>
+                    </Link>
                 </div>
 
                 

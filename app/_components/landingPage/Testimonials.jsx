@@ -46,7 +46,7 @@ export default function Testimonials() {
                         {
                             testimonialsData.map((item, index) => {
                                 return (
-                                    <blockquote className="rounded-xl bg-gray-100 p-6 shadow-sm sm:p-8">
+                                    <blockquote key={index} className="rounded-xl bg-gray-100 p-6 shadow-sm sm:p-8">
                                         <div className="flex items-center gap-4">
                                             <Image
                                                 alt="Profile Image"

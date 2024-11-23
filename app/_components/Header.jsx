@@ -17,12 +17,12 @@ function Header() {
         {
             id: 2,
             name: 'Explore',
-            path: '/'
+            path: '/explore'
         },
         {
             id: 3,
             name: 'Contact Us',
-            path: '/'
+            path: '/contactUs'
         }
     ]
 
@@ -30,12 +30,12 @@ function Header() {
         {
             id: 1,
             name: 'Login',
-            path: '/'
+            path: '/login'
         },
         {
             id: 2,
             name: 'Sign Up',
-            path: '/'
+            path: '/signup'
         }
     ]
 
@@ -75,7 +75,7 @@ function Header() {
                     <ul className="flex flex-col gap-4">
                         {Menu.map((item, index) => (
                             <Link key={index} href={item.path}>
-                                <li className="text-lg font-medium text-gray-800 hover:text-primary cursor-pointer transition-all ease-in-out transform hover:scale-105">
+                                <li className="text-lg font-medium hover:text-primary cursor-pointer transition-all ease-in-out transform hover:scale-105">
                                     {item.name}
                                 </li>
                             </Link>
@@ -83,7 +83,7 @@ function Header() {
                         {/* Add Login and Sign Up links to mobile menu */}
                         {AuthLinks.map((item, index) => (
                             <Link key={index} href={item.path}>
-                                <li className="text-lg font-medium text-gray-800 hover:text-primary cursor-pointer transition-all ease-in-out transform hover:scale-105">
+                                <li className="text-lg font-medium hover:text-primary cursor-pointer transition-all ease-in-out transform hover:scale-105">
                                     {item.name}
                                 </li>
                             </Link>
@@ -94,7 +94,9 @@ function Header() {
 
             {/* Button (only visible on larger screens) */}
             <div className="hidden md:block">
-                <Button>Get Started</Button>
+                <Link href={"/signup"}>
+                    <Button>Get Started</Button>
+                </Link>
             </div>
         </div>
     )
