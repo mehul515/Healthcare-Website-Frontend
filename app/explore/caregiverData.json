@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "name": "Ramesh Kumar",
+        "category": "Elderly Care",
+        "location": "Delhi",
+        "bio": "Experienced caregiver specializing in elderly care and wellness support.",
+        "rating": 4.8,
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "price": 1200
+    },
+    {
+        "id": 2,
+        "name": "Sita Sharma",
+        "category": "Daily Assistance",
+        "location": "Mumbai",
+        "bio": "Compassionate caregiver with expertise in daily tasks and companionship.",
+        "rating": 4.7,
+        "image": "https://randomuser.me/api/portraits/women/1.jpg",
+        "price": 1000
+    },
+    {
+        "id": 3,
+        "name": "Vikram Singh",
+        "category": "Post-Surgery Support",
+        "location": "Chennai",
+        "bio": "Professional caregiver focusing on post-surgery recovery and care.",
+        "rating": 4.9,
+        "image": "https://randomuser.me/api/portraits/men/2.jpg",
+        "price": 1500
+    },
+    {
+        "id": 4,
+        "name": "Meera Patel",
+        "category": "Elderly Care",
+        "location": "Ahmedabad",
+        "bio": "Dedicated caregiver skilled in dementia and elderly wellness care.",
+        "rating": 4.6,
+        "image": "https://randomuser.me/api/portraits/women/2.jpg",
+        "price": 1100
+    },
+    {
+        "id": 5,
+        "name": "Rajesh Gupta",
+        "category": "Daily Assistance",
+        "location": "Bangalore",
+        "bio": "Reliable caregiver for daily assistance and personal support.",
+        "rating": 4.8,
+        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "price": 1300
+    },
+    {
+        "id": 6,
+        "name": "Anita Reddy",
+        "category": "Post-Surgery Support",
+        "location": "Hyderabad",
+        "bio": "Specialized in mobility assistance and post-surgery recovery plans.",
+        "rating": 4.7,
+        "image": "https://randomuser.me/api/portraits/women/3.jpg",
+        "price": 1400
+    },
+    {
+        "id": 7,
+        "name": "Suraj Das",
+        "category": "Elderly Care",
+        "location": "Kolkata",
+        "bio": "Skilled caregiver for elderly wellness and health monitoring.",
+        "rating": 4.9,
+        "image": "https://randomuser.me/api/portraits/men/4.jpg",
+        "price": 1250
+    },
+    {
+        "id": 8,
+        "name": "Priya Mehra",
+        "category": "Daily Assistance",
+        "location": "Pune",
+        "bio": "Friendly and skilled caregiver for daily chores and support.",
+        "rating": 4.6,
+        "image": "https://randomuser.me/api/portraits/women/4.jpg",
+        "price": 950
+    },
+    {
+        "id": 9,
+        "name": "Ravi Iyer",
+        "category": "Post-Surgery Support",
+        "location": "Chennai",
+        "bio": "Dedicated caregiver with experience in specialized post-surgery care.",
+        "rating": 4.8,
+        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "price": 1550
+    },
+    {
+        "id": 10,
+        "name": "Aarti Joshi",
+        "category": "Elderly Care",
+        "location": "Surat",
+        "bio": "Expert caregiver focused on elderly comfort and safety.",
+        "rating": 4.7,
+        "image": "https://randomuser.me/api/portraits/women/5.jpg",
+        "price": 1100
+    },
+    {
+        "id": 11,
+        "name": "Karan Kapoor",
+        "category": "Daily Assistance",
+        "location": "Jaipur",
+        "bio": "Compassionate caregiver for daily routines and personal care.",
+        "rating": 4.9,
+        "image": "https://randomuser.me/api/portraits/men/6.jpg",
+        "price": 1200
+    },
+    {
+        "id": 12,
+        "name": "Divya Nair",
+        "category": "Post-Surgery Support",
+        "location": "Kochi",
+        "bio": "Experienced caregiver for recovery and health assistance.",
+        "rating": 4.6,
+        "image": "https://randomuser.me/api/portraits/women/6.jpg",
+        "price": 1350
+    },
+    {
+        "id": 13,
+        "name": "Arun Khanna",
+        "category": "Elderly Care",
+        "location": "Lucknow",
+        "bio": "Experienced caregiver for elderly care and companionship.",
+        "rating": 4.8,
+        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "price": 1200
+    },
+    {
+        "id": 14,
+        "name": "Pooja Verma",
+        "category": "Daily Assistance",
+        "location": "Nagpur",
+        "bio": "Friendly caregiver for household support and daily activities.",
+        "rating": 4.7,
+        "image": "https://randomuser.me/api/portraits/women/7.jpg",
+        "price": 1050
+    },
+    {
+        "id": 15,
+        "name": "Vivek Roy",
+        "category": "Post-Surgery Support",
+        "location": "Indore",
+        "bio": "Reliable caregiver for post-surgery rehabilitation and care.",
+        "rating": 4.9,
+        "image": "https://randomuser.me/api/portraits/men/8.jpg",
+        "price": 1450
+    },
+    {
+        "id": 16,
+        "name": "Nidhi Shah",
+        "category": "Elderly Care",
+        "location": "Vadodara",
+        "bio": "Caring and skilled in providing elderly health and safety services.",
+        "rating": 4.6,
+        "image": "https://randomuser.me/api/portraits/women/8.jpg",
+        "price": 1000
+    },
+    {
+        "id": 17,
+        "name": "Aman Chawla",
+        "category": "Daily Assistance",
+        "location": "Patna",
+        "bio": "Trustworthy caregiver for daily chores and assistance.",
+        "rating": 4.8,
+        "image": "https://randomuser.me/api/portraits/men/9.jpg",
+        "price": 1150
+    },
+    {
+        "id": 18,
+        "name": "Sonal Jain",
+        "category": "Post-Surgery Support",
+        "location": "Bhopal",
+        "bio": "Specialist in personalized post-surgery recovery care.",
+        "rating": 4.7,
+        "image": "https://randomuser.me/api/portraits/women/9.jpg",
+        "price": 1300
+    },
+    {
+        "id": 19,
+        "name": "Manoj Tiwari",
+        "category": "Elderly Care",
+        "location": "Ranchi",
+        "bio": "Dedicated to elderly well-being and safety.",
+        "rating": 4.9,
+        "image": "https://randomuser.me/api/portraits/men/10.jpg",
+        "price": 1250
+    },
+    {
+        "id": 20,
+        "name": "Kavya Iyer",
+        "category": "Daily Assistance",
+        "location": "Thiruvananthapuram",
+        "bio": "Expert in daily assistance and household chores.",
+        "rating": 4.6,
+        "image": "https://randomuser.me/api/portraits/women/10.jpg",
+        "price": 950
+    }
+]

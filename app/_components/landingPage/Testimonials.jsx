@@ -29,17 +29,17 @@ export default function Testimonials() {
             rating: 5
         }
     ];
-    
+
 
     return (
         <div className=''>
             <section className="bg-white">
                 <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
                     <h2 className="text-center text-3xl font-bold sm:text-4xl mb-4 text-gray-700">
-                    <span className='text-primary'>Trusted Testimonials</span> From Those We’ve <span className='text-primary'>Served</span>
+                        <span className='text-primary'>Trusted Testimonials</span> From Those We’ve <span className='text-primary'>Served</span>
                     </h2>
                     <p className="text-gray-600 hidden md:block w-[70%] mx-auto text-center font-medium">
-                    Discover why our platform is trusted by users for reliable healthcare services and the care they received.
+                        Discover why our platform is trusted by users for reliable healthcare services and the care they received.
                     </p>
 
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-x-20 gap-y-14 mt-10">
@@ -58,42 +58,11 @@ export default function Testimonials() {
 
                                             <div>
                                                 <div className="flex gap-0.5 text-green-500">
-
-                                                    <Image
-                                                        src={"/LandingPage/stars.svg"}
-                                                        width={20}
-                                                        height={20}
-                                                        alt='Star'
-                                                    />
-
-                                                    <Image
-                                                        src={"/LandingPage/stars.svg"}
-                                                        width={20}
-                                                        height={20}
-                                                        alt='Star'
-                                                    />
-                                                    <Image
-                                                        src={"/LandingPage/stars.svg"}
-                                                        width={20}
-                                                        height={20}
-                                                        alt='Star'
-                                                    />
-                                                    <Image
-                                                        src={"/LandingPage/stars.svg"}
-                                                        width={20}
-                                                        height={20}
-                                                        alt='Star'
-                                                    />
-                                                    <Image
-                                                        src={"/LandingPage/stars.svg"}
-                                                        width={20}
-                                                        height={20}
-                                                        alt='Star'
-                                                    />
+                                                    ⭐⭐⭐⭐⭐
                                                 </div>
 
 
-                                                <p className="mt-3 text-gray-600 font-medium text-[15px]"> 
+                                                <p className="mt-3 text-gray-600 font-medium text-[15px]">
                                                     {item.review}
                                                 </p>
                                                 <p className="mt-0.5 text-lg font-semibold text-gray-700">- {item.name}</p>
