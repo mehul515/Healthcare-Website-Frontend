@@ -5,11 +5,11 @@ import React from "react";
 
 export default function Login() {
     return (
-        <div className="flex items-center font-medium justify-center min-h-screen">
+        <div className="flex font-medium justify-center min-h-screen mt-6">
             {/* Container */}
             <div className="bg-white rounded-lg flex w-full overflow-hidden">
                 {/* Left Section - Image */}
-                <div className="hidden md:flex justify-end items-center md:w-[50%]">
+                <div className="hidden md:flex justify-end items-center md:h-3/4 md:w-[50%]">
                     <Image
                         className="w-4/5"
                         src={"/LandingPage/hero.png"}
@@ -20,7 +20,7 @@ export default function Login() {
                 </div>
 
                 {/* Right Section - Form */}
-                <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-12 max-w-[470px] flex mx-auto items-center">
+                <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-12 max-w-[470px] flex mx-auto ">
                     <div className="w-full max-w-sm mx-auto">
                         <h2 className="text-3xl font-bold mb-2.5 text-center text-gray-700">Welcome Back</h2>
                         <p className="text-[15px] text-center mb-7 text-gray-600">Reconnect with trusted caregivers, expert doctors, and all your personalized health insights.</p>
