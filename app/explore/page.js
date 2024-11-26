@@ -8,8 +8,8 @@ export default function Home() {
         <div>
             <div className="container mx-auto mt-10">
                 <Tabs
-                    tab1Label="Our Family of Doctors"
-                    tab2Label="Our Family of Care Givers"
+                    tab1Label="Expert Doctors"
+                    tab2Label="Trusted Care Givers"
                     tab1Content={<DoctorTab/>}
                     tab2Content={<CareGiver/>}
                 />

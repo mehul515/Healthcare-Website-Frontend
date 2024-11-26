@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. John Doe",
+    "speciality": "General Physician",
+    "location": "New York",
+    "image": "https://via.placeholder.com/150",
+    "price": "$50",
+    "rating": 4.2,
+    "bio": "Experienced general physician with over 15 years of practice. Specializes in preventive care and health management."
+  },
+  {
+    "id": 2,
+    "name": "Dr. Jane Smith",
+    "speciality": "Gynecologist",
+    "location": "Los Angeles",
+    "image": "https://via.placeholder.com/150",
+    "price": "$70",
+    "rating": 4.7,
+    "bio": "Passionate gynecologist focused on women's health. Provides comprehensive care for various gynecological conditions."
+  },
+  {
+    "id": 3,
+    "name": "Dr. Alex Green",
+    "speciality": "Dermatologist",
+    "location": "Chicago",
+    "image": "https://via.placeholder.com/150",
+    "price": "$60",
+    "rating": 4.8,
+    "bio": "Board-certified dermatologist specializing in skincare treatments, acne, and cosmetic dermatology."
+  },
+  {
+    "id": 4,
+    "name": "Dr. Lisa Brown",
+    "speciality": "Pediatricians",
+    "location": "San Francisco",
+    "image": "https://via.placeholder.com/150",
+    "price": "$55",
+    "rating": 4.6,
+    "bio": "Dedicated pediatrician with a focus on children's health and developmental milestones."
+  },
+  {
+    "id": 5,
+    "name": "Dr. Michael Harris",
+    "speciality": "Neurologist",
+    "location": "Houston",
+    "image": "https://via.placeholder.com/150",
+    "price": "$100",
+    "rating": 4.9,
+    "bio": "Neurologist with expertise in diagnosing and treating brain disorders, including epilepsy and Parkinson’s."
+  },
+  {
+    "id": 6,
+    "name": "Dr. Emily Davis",
+    "speciality": "General Physician",
+    "location": "Miami",
+    "image": "https://via.placeholder.com/150",
+    "price": "$45",
+    "rating": 4.4,
+    "bio": "Skilled general physician with a focus on heart disease prevention and lifestyle management."
+  },
+  {
+    "id": 7,
+    "name": "Dr. Sarah Miller",
+    "speciality": "Gynecologist",
+    "location": "Boston",
+    "image": "https://via.placeholder.com/150",
+    "price": "$75",
+    "rating": 4.6,
+    "bio": "Experienced gynecologist with expertise in reproductive health and prenatal care."
+  },
+  {
+    "id": 8,
+    "name": "Dr. William Taylor",
+    "speciality": "Dermatologist",
+    "location": "Los Angeles",
+    "image": "https://via.placeholder.com/150",
+    "price": "$65",
+    "rating": 4.7,
+    "bio": "Specializes in acne treatments, anti-aging procedures, and overall skin health."
+  },
+  {
+    "id": 9,
+    "name": "Dr. Jessica Clark",
+    "speciality": "Pediatricians",
+    "location": "Austin",
+    "image": "https://via.placeholder.com/150",
+    "price": "$50",
+    "rating": 4.8,
+    "bio": "Pediatrician with extensive experience in childhood vaccinations and growth monitoring."
+  },
+  {
+    "id": 10,
+    "name": "Dr. Daniel Lewis",
+    "speciality": "Neurologist",
+    "location": "Seattle",
+    "image": "https://via.placeholder.com/150",
+    "price": "$90",
+    "rating": 4.7,
+    "bio": "Expert in diagnosing and treating neurological disorders like Alzheimer's and multiple sclerosis."
+  },
+  {
+    "id": 11,
+    "name": "Dr. Chloe Wilson",
+    "speciality": "General Physician",
+    "location": "Dallas",
+    "image": "https://via.placeholder.com/150",
+    "price": "$55",
+    "rating": 4.5,
+    "bio": "Committed to providing holistic care for all age groups, focusing on preventive health strategies."
+  },
+  {
+    "id": 12,
+    "name": "Dr. David Robinson",
+    "speciality": "Gynecologist",
+    "location": "Chicago",
+    "image": "https://via.placeholder.com/150",
+    "price": "$80",
+    "rating": 4.6,
+    "bio": "Offers compassionate care for women of all ages, with a focus on family planning and menopause."
+  },
+  {
+    "id": 13,
+    "name": "Dr. Amanda Martinez",
+    "speciality": "Dermatologist",
+    "location": "San Francisco",
+    "image": "https://via.placeholder.com/150",
+    "price": "$70",
+    "rating": 4.9,
+    "bio": "Certified dermatologist who specializes in treating sun damage and cosmetic dermatology."
+  },
+  {
+    "id": 14,
+    "name": "Dr. Ethan Harris",
+    "speciality": "Pediatricians",
+    "location": "New York",
+    "image": "https://via.placeholder.com/150",
+    "price": "$60",
+    "rating": 4.2,
+    "bio": "Pediatric specialist with a focus on childhood allergies and asthma management."
+  },
+  {
+    "id": 15,
+    "name": "Dr. Natalie Scott",
+    "speciality": "Neurologist",
+    "location": "Denver",
+    "image": "https://via.placeholder.com/150",
+    "price": "$95",
+    "rating": 4.7,
+    "bio": "Neurologist with a background in treating brain injuries and sleep disorders."
+  },
+  {
+    "id": 16,
+    "name": "Dr. Olivia Moore",
+    "speciality": "General Physician",
+    "location": "Chicago",
+    "image": "https://via.placeholder.com/150",
+    "price": "$50",
+    "rating": 4.5,
+    "bio": "General physician with a focus on chronic disease management and preventive medicine."
+  },
+  {
+    "id": 17,
+    "name": "Dr. Brian King",
+    "speciality": "Gynecologist",
+    "location": "Houston",
+    "image": "https://via.placeholder.com/150",
+    "price": "$85",
+    "rating": 4.6,
+    "bio": "Gynecologist with expertise in pelvic health and minimally invasive surgeries."
+  },
+  {
+    "id": 18,
+    "name": "Dr. Grace Lee",
+    "speciality": "Dermatologist",
+    "location": "Miami",
+    "image": "https://via.placeholder.com/150",
+    "price": "$65",
+    "rating": 4.8,
+    "bio": "Board-certified dermatologist with a passion for treating acne and skin conditions."
+  },
+  {
+    "id": 19,
+    "name": "Dr. Mark Young",
+    "speciality": "Pediatricians",
+    "location": "Los Angeles",
+    "image": "https://via.placeholder.com/150",
+    "price": "$55",
+    "rating": 4.7,
+    "bio": "Pediatrician with a focus on childhood vaccinations and pediatric care for newborns."
+  },
+  {
+    "id": 20,
+    "name": "Dr. Laura White",
+    "speciality": "Neurologist",
+    "location": "Austin",
+    "image": "https://via.placeholder.com/150",
+    "price": "$110",
+    "rating": 4.9,
+    "bio": "Neurologist specializing in brain diseases, including Alzheimer's, Parkinson’s, and dementia."
+  },
+  {
+    "id": 21,
+    "name": "Dr. James Clark",
+    "speciality": "General Physician",
+    "location": "Washington DC",
+    "image": "https://via.placeholder.com/150",
+    "price": "$50",
+    "rating": 4.6,
+    "bio": "General physician with a special interest in geriatrics and overall wellness."
+  },
+  {
+    "id": 22,
+    "name": "Dr. Samuel Walker",
+    "speciality": "Gynecologist",
+    "location": "Phoenix",
+    "image": "https://via.placeholder.com/150",
+    "price": "$75",
+    "rating": 4.5,
+    "bio": "Gynecologist specializing in adolescent care and family planning."
+  },
+  {
+    "id": 23,
+    "name": "Dr. Julia Harris",
+    "speciality": "Dermatologist",
+    "location": "San Diego",
+    "image": "https://via.placeholder.com/150",
+    "price": "$70",
+    "rating": 4.7,
+    "bio": "Dermatologist with a focus on anti-aging treatments and acne solutions."
+  },
+  {
+    "id": 24,
+    "name": "Dr. Oliver Robinson",
+    "speciality": "Pediatricians",
+    "location": "Dallas",
+    "image": "https://via.placeholder.com/150",
+    "price": "$60",
+    "rating": 4.8,
+    "bio": "Dedicated pediatrician providing care to children from infancy to adolescence."
+  },
+  {
+    "id": 25,
+    "name": "Dr. Zoe Green",
+    "speciality": "Neurologist",
+    "location": "Chicago",
+    "image": "https://via.placeholder.com/150",
+    "price": "$100",
+    "rating": 4.6,
+    "bio": "Neurologist specializing in brain tumors and neurological rehabilitation."
+  },
+  {
+    "id": 26,
+    "name": "Dr. Charles Adams",
+    "speciality": "General Physician",
+    "location": "New York",
+    "image": "https://via.placeholder.com/150",
+    "price": "$60",
+    "rating": 4.4,
+    "bio": "Experienced in treating a wide range of general health conditions and chronic diseases."
+  },
+  {
+    "id": 27,
+    "name": "Dr. Lily Evans",
+    "speciality": "Gynecologist",
+    "location": "Boston",
+    "image": "https://via.placeholder.com/150",
+    "price": "$80",
+    "rating": 4.8,
+    "bio": "Gynecologist offering advanced services in hormone therapy and minimally invasive procedures."
+  },
+  {
+    "id": 28,
+    "name": "Dr. Ryan White",
+    "speciality": "Dermatologist",
+    "location": "Denver",
+    "image": "https://via.placeholder.com/150",
+    "price": "$55",
+    "rating": 4.5,
+    "bio": "Experienced dermatologist specializing in mole and skin cancer prevention."
+  },
+  {
+    "id": 29,
+    "name": "Dr. Victoria Cooper",
+    "speciality": "Pediatricians",
+    "location": "Las Vegas",
+    "image": "https://via.placeholder.com/150",
+    "price": "$50",
+    "rating": 4.7,
+    "bio": "Pediatric care provider with a passion for children's nutrition and health education."
+  },
+  {
+    "id": 30,
+    "name": "Dr. Jonathan Thomas",
+    "speciality": "Neurologist",
+    "location": "San Jose",
+    "image": "https://via.placeholder.com/150",
+    "price": "$95",
+    "rating": 4.8,
+    "bio": "Neurologist specializing in motor neuron diseases and stroke rehabilitation."
+  },
+  {
+    "id": 31,
+    "name": "Dr. Alice Davis",
+    "speciality": "General Physician",
+    "location": "Seattle",
+    "image": "https://via.placeholder.com/150",
+    "price": "$50",
+    "rating": 4.6,
+    "bio": "General physician focused on preventive healthcare and lifestyle changes."
+  },
+  {
+    "id": 32,
+    "name": "Dr. Adam Thomas",
+    "speciality": "Gynecologist",
+    "location": "Orlando",
+    "image": "https://via.placeholder.com/150",
+    "price": "$70",
+    "rating": 4.5,
+    "bio": "Gynecologist specializing in fertility and women's reproductive health."
+  },
+  {
+    "id": 33,
+    "name": "Dr. Emma Taylor",
+    "speciality": "Dermatologist",
+    "location": "Miami",
+    "image": "https://via.placeholder.com/150",
+    "price": "$75",
+    "rating": 4.9,
+    "bio": "Skin expert who specializes in managing chronic skin conditions and cosmetic dermatology."
+  },
+  {
+    "id": 34,
+    "name": "Dr. Evan Hall",
+    "speciality": "Pediatricians",
+    "location": "Portland",
+    "image": "https://via.placeholder.com/150",
+    "price": "$60",
+    "rating": 4.7,
+    "bio": "Pediatrician dedicated to providing compassionate care to infants and children."
+  },
+  {
+    "id": 35,
+    "name": "Dr. Sophia Clark",
+    "speciality": "Neurologist",
+    "location": "Salt Lake City",
+    "image": "https://via.placeholder.com/150",
+    "price": "$90",
+    "rating": 4.6,
+    "bio": "Neurologist specializing in migraine treatment and chronic pain management."
+  }
+]

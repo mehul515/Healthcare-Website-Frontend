@@ -58,7 +58,36 @@ export default function Testimonials() {
 
                                             <div>
                                                 <div className="flex gap-0.5 text-green-500">
-                                                    ⭐⭐⭐⭐⭐
+                                                    <Image
+                                                        src={"/stars.svg"}
+                                                        height={18}
+                                                        width={18}
+                                                        alt='star'
+                                                    />
+                                                    <Image
+                                                        src={"/stars.svg"}
+                                                        height={18}
+                                                        width={18}
+                                                        alt='star'
+                                                    />
+                                                    <Image
+                                                        src={"/stars.svg"}
+                                                        height={18}
+                                                        width={18}
+                                                        alt='star'
+                                                    />
+                                                    <Image
+                                                        src={"/stars.svg"}
+                                                        height={18}
+                                                        width={18}
+                                                        alt='star'
+                                                    />
+                                                    <Image
+                                                        src={"/stars.svg"}
+                                                        height={18}
+                                                        width={18}
+                                                        alt='star'
+                                                    /> 
                                                 </div>
 
 
