@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import caregiverData from "./caregiverData.json";
+import Link from "next/link";
 
 const CaregiversPage = () => {
     const [caregivers, setCaregivers] = useState(caregiverData);
@@ -129,7 +130,9 @@ const CaregiversPage = () => {
 
                             <p className="text-sm text-gray-600 mt-2">{caregiver.bio}</p>
                             <div className="mt-3 flex justify-center">
-                                <Button>Book Appointment</Button>
+                                <Link href={`/explore/caregivers/${caregiver.id}`}>
+                                    <Button>Book Appointment</Button>
+                                </Link>
                             </div>
                         </div>
                     ))) : (

@@ -43,7 +43,7 @@ function Header() {
         <div className="relative flex items-center justify-between p-4 shadow-sm text-gray-700 font-medium">
             <div className="flex items-center gap-10">
                 {/* Logo visible on both desktop and mobile header */}
-                <Image src="logo.svg" alt="logo" width={160} height={80} />
+                <Image src="/logo.svg" alt="logo" width={160} height={80} />
 
                 {/* Menu for large screens */}
                 <ul className="md:flex gap-8 hidden">

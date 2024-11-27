@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import doctorData from './doctorData.json';  // Assuming the doctorData.json is in the same directory
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const Doctors = () => {
     const [speciality, setSpeciality] = useState("All Doctors");
@@ -12,7 +13,7 @@ const Doctors = () => {
         'General Physician',
         'Gynecologist',
         'Dermatologist',
-        'Pediatricians',
+        'Pediatrician',
         'Neurologist',
         'Gastroenterologist',
     ];
@@ -21,7 +22,7 @@ const Doctors = () => {
         if (selectedSpeciality === 'All Doctors') {
             setSpeciality(selectedSpeciality);
             setFilterDoc(doctorData);  // Show all doctors
-        } else{
+        } else {
             setSpeciality(selectedSpeciality);
             setFilterDoc(
                 doctorData.filter(doc => doc.speciality === selectedSpeciality)
@@ -79,7 +80,7 @@ const Doctors = () => {
             <div className="text-center mb-6">
                 <h2 className="text-3xl font-bold sm:text-4xl mb-4 text-gray-700">Explore and <span className='text-primary'>Connect</span> with Expert <span className='text-primary'>Doctors</span></h2>
                 <p className="text-gray-600 hidden md:block w-[70%] mx-auto text-center font-medium">
-                Find expert doctors across specialties, ready to provide personalized care, detailed consultations, and reliable guidance for your health and well-being.
+                    Find expert doctors across specialties, ready to provide personalized care, detailed consultations, and reliable guidance for your health and well-being.
                 </p>
             </div>
 
@@ -118,7 +119,9 @@ const Doctors = () => {
 
                         <p className="text-sm text-gray-600 mt-2">{doctor.bio}</p>
                         <div className="mt-3 flex justify-center">
-                            <Button>Book Appointment</Button>
+                            <Link href={`/explore/doctors/${doctor.id}`} >
+                                <Button>Book Appointment</Button>
+                            </Link>
                         </div>
                     </div>
                 ))}
