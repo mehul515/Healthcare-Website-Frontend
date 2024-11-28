@@ -120,7 +120,7 @@ const CaregiversPage = () => {
                             <h3 className="font-bold text-xl text-center">{caregiver.name}</h3>
                             <p className="text-sm text-gray-600 text-center">{caregiver.category}</p>
                             <p className="text-sm text-gray-500 text-center">{caregiver.location}</p>
-                            <p className="text-lg font-semibold text-center mt-2">${caregiver.price}/day</p>
+                            <p className="text-lg font-semibold text-center mt-2">₹{caregiver.price}/day</p>
 
                             {/* Rating Stars */}
                             <div className="flex justify-center items-center mt-1 text-yellow-500">

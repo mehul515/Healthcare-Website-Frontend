@@ -10,7 +10,6 @@ import { FaMapMarkerAlt, FaStar, FaStarHalfAlt, FaRegStar, FaStethoscope, FaGrad
 
 const DoctorDetails = ({ params }) => {
   const { id } = React.use(params); // Get the doctor ID from the URL params
-  console.log(doctorData);
 
   const [doctor, setDoctor] = useState(null);  // State to hold the doctor data
   const [slotIndex, setSlotIndex] = useState(0);  // State for selected day slot
@@ -24,6 +23,10 @@ const DoctorDetails = ({ params }) => {
     "04:00 pm",
     "06:00 pm",
   ];
+
+  // Get current date and month
+  const currentDate = new Date();
+  const currentDay = currentDate.getDate();
 
   useEffect(() => {
     // Find the doctor data based on the `id` from the params
@@ -64,6 +67,24 @@ const DoctorDetails = ({ params }) => {
 
     return stars;
   };
+
+
+  const generateBookingDates = () => {
+    const dates = [];
+    for (let i = 0; i < 7; i++) {
+      const nextDay = new Date();
+      nextDay.setDate(currentDay + i);
+      const dayOfWeek = nextDay.getDay();
+      const dayOfMonth = nextDay.getDate();
+      const fullDate = nextDay.toLocaleString('default', { weekday: 'long', month: 'long', day: 'numeric' }); // Full date format (e.g., "Monday, November 28")
+      const month = nextDay.toLocaleString('default', { month: 'long' }); // Extract month
+      const date = nextDay.getDate(); // Extract day of the month
+      dates.push({ dayOfWeek, fullDate, month, date });
+    }
+    return dates;
+  };
+
+  const bookingDates = generateBookingDates();
 
   return (
     <div className="p-4 my-24 md:my-2">
@@ -133,20 +154,23 @@ const DoctorDetails = ({ params }) => {
 
       {/* Booking slots */}
       <div className="mt-10 font-medium flex justify-center items-center text-gray-700">
-        <div className="w-full max-w-3xl">
+        <div className="w-full max-w-4xl">
           <p className="text-center text-xl font-semibold mb-6">Booking Slots</p>
 
           {/* Days of the week (Responsive: stack on small screens, row on larger) */}
           <div className="flex flex-wrap justify-center gap-4 mb-4">
-            {daysOfWeek.map((day, idx) => (
+          {bookingDates.map((date, idx) => (
               <div
                 key={idx}
                 onClick={() => setSlotIndex(idx)}
-                className={`text-center shadow-md py-4 min-w-[90px] rounded-full cursor-pointer 
-                            ${slotIndex === idx ? "bg-primary text-white" : "border border-gray-200"}`}
+                className={`text-center shadow-md flex justify-center items-center w-28 h-28 rounded-full cursor-pointer 
+                            ${slotIndex === idx ? "bg-primary text-white" : "border text-gray-600 border-gray-200"}`}
               >
-                <p>{day}</p>
-                <p>{23 + idx}</p> {/* Sample date logic */}
+                <div className='text-sm font-semibold'>
+                  <p>{daysOfWeek[date.dayOfWeek]}</p> {/* Day of the month */}
+                  <p className='text-base'>{date.date}</p> {/* Day of the month */}
+                  <p>{date.month}</p> {/* Month on a separate line */}
+                </div>
               </div>
             ))}
           </div>

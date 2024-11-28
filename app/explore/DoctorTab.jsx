@@ -109,7 +109,7 @@ const Doctors = () => {
                         <h3 className="font-bold text-xl text-center">{doctor.name}</h3>
                         <p className="text-sm text-gray-600 text-center">{doctor.speciality}</p>
                         <p className="text-sm text-gray-500 text-center">{doctor.location}</p>
-                        <p className="text-lg font-semibold text-center mt-2">{doctor.price}</p>
+                        <p className="text-lg font-semibold text-center mt-2">₹{doctor.price}</p>
 
                         {/* Rating Stars */}
                         <div className="flex justify-center items-center mt-1 text-yellow-500">
