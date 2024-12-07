@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { FaUserAlt, FaCalendarAlt, FaSignOutAlt, FaHome, FaSearch, FaEnvelope, FaSignInAlt, FaUserPlus } from 'react-icons/fa' 
+import { FaUserAlt, FaCalendarAlt, FaSignOutAlt, FaHome, FaSearch, FaEnvelope, FaSignInAlt, FaUserPlus, FaInfoCircle, FaNewspaper } from 'react-icons/fa'
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,12 +23,15 @@ function Header() {
         setUser(sampleUser)
     }, [])
 
-    // Menu items
     const Menu = [
         { id: 1, name: 'Home', path: '/', icon: <FaHome className="mr-2" /> },
         { id: 2, name: 'Explore', path: '/explore', icon: <FaSearch className="mr-2" /> },
-        { id: 3, name: 'Contact Us', path: '/contactUs', icon: <FaEnvelope className="mr-2" /> }
+        { id: 5, name: 'Blogs', path: '/blogs', icon: <FaNewspaper className="mr-2" /> },  // Blogs icon
+        { id: 4, name: 'About Us', path: '/aboutUs', icon: <FaInfoCircle className="mr-2" /> },  // About icon
+        { id: 3, name: 'Contact Us', path: '/contactUs', icon: <FaEnvelope className="mr-2" /> },
     ]
+    
+
 
     // Authentication links (Login/Signup)
     const AuthLinks = [
@@ -38,9 +41,9 @@ function Header() {
 
     // Profile menu options with icons
     const ProfileLinks = [
-        { name: 'Profile', path: '/profile', icon: <FaUserAlt className="mr-2" /> },
-        { name: 'My Appointments', path: '/appointments', icon: <FaCalendarAlt className="mr-2" /> },
-        { name: 'Logout', path: '/logout', icon: <FaSignOutAlt className="mr-2" /> }
+        { name: 'Profile', path: '/user/profile', icon: <FaUserAlt className="mr-2" /> },
+        { name: 'My Appointments', path: '/user/appointments', icon: <FaCalendarAlt className="mr-2" /> },
+        { name: 'Logout', path: '/login', icon: <FaSignOutAlt className="mr-2" /> }
     ]
 
     // Toggle dropdown visibility
@@ -70,7 +73,7 @@ function Header() {
                 <Image src="/logo.svg" alt="logo" width={160} height={80} />
 
                 {/* Menu for large screens */}
-                <ul className="md:flex gap-10 hidden">
+                <ul className="md:flex gap-8 hidden">
                     {Menu.map((item, index) => (
                         <Link key={index} href={item.path}>
                             <li className="text-base text-gray-600 font-medium hover:text-primary cursor-pointer hover:scale-105 transition-all ease-in-out flex items-center">
@@ -115,7 +118,7 @@ function Header() {
                         AuthLinks.map((item, index) => (
                             <Link key={index} href={item.path}>
                                 <li className="text-base text-gray-600 font-medium hover:text-primary cursor-pointer transition-all ease-in-out transform hover:scale-105 py-1.5 px-4 rounded-md hover:bg-gray-100 flex items-center gap-x-1">
-                                {item.icon}
+                                    {item.icon}
                                     {item.name}
                                 </li>
                             </Link>

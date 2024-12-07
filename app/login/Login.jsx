@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Login() {
     return (
-        <div className="flex font-medium justify-center min-h-screen mt-6">
+        <div className="flex font-medium justify-center min-h-[80vh] mt-6">
             {/* Container */}
             <div className="bg-white rounded-lg flex w-full overflow-hidden">
                 {/* Left Section - Image */}

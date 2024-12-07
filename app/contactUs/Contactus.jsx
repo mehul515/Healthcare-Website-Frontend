@@ -28,12 +28,12 @@ const ContactUsPage = () => {
     };
 
     return (
-        <>
+        <div className='min-h-[80vh]'>
 
             <div className="py-10 px-8 min-h-screen bg-gray-100 rounded-2xl mt-10 items-center justify-center">
 
-            <h2 className="text-3xl font-bold mb-2.5 text-center text-gray-700">Contact Us</h2>
-            <p className="text-[15px] text-center mb-7 text-gray-600">Get in touch with us for any queries or feedback. We'd love to hear from you!</p>
+                <h2 className="text-3xl font-bold mb-2.5 text-center text-gray-700">Contact Us</h2>
+                <p className="text-[15px] text-center mb-7 text-gray-600">Get in touch with us for any queries or feedback. We'd love to hear from you!</p>
                 {/* Main Content */}
                 <div className="container flex flex-col md:flex-row gap-6 w-full max-w-5xl mt-10 mx-auto bg-gray-100 rounded-lg overflow-hidden">
 
@@ -111,7 +111,7 @@ const ContactUsPage = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

@@ -45,7 +45,6 @@ export default function FAQ() {
                     return (
                         <details key={index}
                             className="mx-auto max-w-[800px] group rounded-xl bg-gray-100 py-3 px-6 [&_summary::-webkit-details-marker]:hidden"
-                            open
                         >
                             <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                                 <h2 className="font-medium text-gray-700">

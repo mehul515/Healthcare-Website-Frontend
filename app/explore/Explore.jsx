@@ -6,7 +6,7 @@ const Tabs = ({ tab1Label, tab2Label, tab1Content, tab2Content }) => {
   const [activeTab, setActiveTab] = useState(1);  // 1 for tab1, 2 for tab2
 
   return (
-    <div>
+    <div className='min-h-[80vh]'>
       {/* Tabs for larger screens */}
       <div className="flex justify-center items-center">
         <nav className="flex gap-8" aria-label="Tabs">
