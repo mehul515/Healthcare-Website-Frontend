@@ -1,15 +1,69 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios"; // Ensure axios is imported
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
+import { jsx } from "react/jsx-runtime";
 
 export default function Login() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const jwt = sessionStorage.getItem('jwt');
+        if (jwt) {
+            window.location.href = "/";
+        }
+    }, [])
+
+
+    const onLogin = async (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        const userData = {
+            identifier: email,
+            password: password,
+        };
+
+        try {
+            setLoading(true);
+            // Send POST request to login the user
+            const response = await axios.post("http://localhost:1337/api/auth/local", userData);
+
+            if (response.status === 200) {
+                console.log(response);
+                sessionStorage.setItem("user", JSON.stringify(response.data.user));
+                sessionStorage.setItem("jwt", response.data.jwt);
+                toast.success("Login Successful")
+                setTimeout(() => {
+                    window.location.href = "/"; // Redirect to homepage or dashboard
+                }, 500)
+            }
+        } catch (error) {
+            console.log(error)
+            if (error.response) {
+                console.log(error.response.data.error.message);
+                toast.error(error.response.data.error.message)
+            } else {
+                toast.error("An unknown error occurred.");
+            }
+        } finally {
+            setLoading(false);
+        }
+    }
+
     return (
-        <div className="flex font-medium justify-center min-h-[80vh] mt-6">
+        <div className="flex font-medium justify-center min-h-[80vh] md:mt-20 mt-6">
             {/* Container */}
+            <Toaster />
             <div className="bg-white rounded-lg flex w-full overflow-hidden">
                 {/* Left Section - Image */}
-                <div className="hidden md:flex justify-end items-center md:h-3/4 md:w-[50%]">
+                <div className="hidden md:flex justify-end items-center my-auto md:h-3/4 md:w-[50%]">
                     <Image
                         className="w-4/5"
                         src={"/LandingPage/hero.png"}
@@ -20,13 +74,13 @@ export default function Login() {
                 </div>
 
                 {/* Right Section - Form */}
-                <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-12 max-w-[470px] flex mx-auto ">
+                <div className="flex-1 p-6 sm:p-8 md:p-10 lg:p-12 max-w-[470px] flex mx-auto">
                     <div className="w-full max-w-sm mx-auto">
                         <h2 className="text-3xl font-bold mb-2.5 text-center text-gray-700">Welcome Back</h2>
                         <p className="text-[15px] text-center mb-7 text-gray-600">Reconnect with trusted caregivers, expert doctors, and all your personalized health insights.</p>
 
                         {/* Form */}
-                        <form>
+                        <form onSubmit={onLogin}> {/* Use onSubmit here */}
                             {/* Email */}
                             <div className="mb-3">
                                 <label className="block text-[11px] text-gray-600 font-medium">
@@ -36,6 +90,7 @@ export default function Login() {
                                     type="email"
                                     placeholder="johndane@gmail.com"
                                     className="w-full border-2 rounded px-3 py-1.5 mt-1 text-[13px] focus:outline-none focus:ring-2 focus:ring-primary"
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                             </div>
 
@@ -48,6 +103,7 @@ export default function Login() {
                                     type="password"
                                     placeholder="••••••••"
                                     className="w-full border-2 rounded px-3 py-1.5 mt-1 text-[13px] focus:outline-none focus:ring-2 focus:ring-primary"
+                                    onChange={(e) => setPassword(e.target.value)}
                                 />
                             </div>
 
@@ -60,7 +116,13 @@ export default function Login() {
 
                             {/* Submit Button */}
                             <div className="w-full flex justify-center items-center">
-                                <Button className="w-64">Login</Button>
+                                <Button
+                                    className="w-64"
+                                    type="submit" // Use submit type to trigger form submission
+                                    disabled={!(email && password) || loading}
+                                >
+                                    {loading ? "Logging In..." : "Login"}
+                                </Button>
                             </div>
                         </form>
 

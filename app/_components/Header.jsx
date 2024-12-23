@@ -11,17 +11,7 @@ function Header() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     const [user, setUser] = useState(null) // Track user data
 
-    // Example: Set a sample user for testing
-    useEffect(() => {
-        // Sample user for demonstration
-        const sampleUser = {
-            name: "John Doe",
-            image: "https://randomuser.me/api/portraits/men/13.jpg"
-        }
-
-        // Simulating user login status
-        setUser(sampleUser)
-    }, [])
+    const isLoggedIn = sessionStorage.getItem("jwt")? true : false;
 
     const Menu = [
         { id: 1, name: 'Home', path: '/', icon: <FaHome className="mr-2" /> },
@@ -128,10 +118,10 @@ function Header() {
             </div>
 
             {/* Profile Icon (only visible if user is logged in) */}
-            {user ? (
+            {isLoggedIn ? (
                 <div className="relative user-profile hidden md:block" onClick={toggleDropdown}>
                     <Image
-                        src={user.image}
+                        src={"/profileIcon.png"}
                         alt="Profile"
                         width={40}
                         height={40}
