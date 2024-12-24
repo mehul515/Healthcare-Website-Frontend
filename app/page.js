@@ -29,7 +29,7 @@ export default function Home() {
         return <PatientDashboard />;
       case "doctor":
         return <DoctorDashboard />;
-      case "careGiver":
+      case "caregiver":
         return <CareGiver />;
       case "admin":
         return <AdminDashboard />;

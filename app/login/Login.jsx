@@ -134,7 +134,7 @@ export default function Login() {
                         </div>
 
                         {/* Google Button */}
-                        <div className="flex gap-2 mb-4">
+                        {/* <div className="flex gap-2 mb-4">
                             <button className="flex gap-2 justify-center align-middle text-sm border rounded bg-white shadow-sm hover:bg-gray-100 w-64 mx-auto">
                                 <Image
                                     src={"/LandingPage/googleIcon.svg"}
@@ -145,7 +145,7 @@ export default function Login() {
                                 />
                                 <p className="my-2 text-gray-600">Login with Google</p>
                             </button>
-                        </div>
+                        </div> */}
 
                         <p className="text-center mt-4 text-[15px] text-gray-600">
                             Don’t have an account?{" "}

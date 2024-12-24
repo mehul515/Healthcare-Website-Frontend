@@ -9,9 +9,14 @@ import { FaUserAlt, FaCalendarAlt, FaSignOutAlt, FaHome, FaSearch, FaEnvelope, F
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-    const [user, setUser] = useState(null) // Track user data
 
-    const isLoggedIn = sessionStorage.getItem("jwt")? true : false;
+    const isLoggedIn = sessionStorage.getItem("jwt") ? true : false;
+
+    // Handle logout
+    const handleLogout = () => {
+        sessionStorage.clear(); // Clears sessionStorage
+        window.location.href = '/login'; // Redirects to login page after logout
+    }
 
     const Menu = [
         { id: 1, name: 'Home', path: '/', icon: <FaHome className="mr-2" /> },
@@ -20,8 +25,6 @@ function Header() {
         { id: 4, name: 'About Us', path: '/aboutUs', icon: <FaInfoCircle className="mr-2" /> },  // About icon
         { id: 3, name: 'Contact Us', path: '/contactUs', icon: <FaEnvelope className="mr-2" /> },
     ]
-    
-
 
     // Authentication links (Login/Signup)
     const AuthLinks = [
@@ -33,7 +36,7 @@ function Header() {
     const ProfileLinks = [
         { name: 'Profile', path: '/user/profile', icon: <FaUserAlt className="mr-2" /> },
         { name: 'My Appointments', path: '/user/appointments', icon: <FaCalendarAlt className="mr-2" /> },
-        { name: 'Logout', path: '/login', icon: <FaSignOutAlt className="mr-2" /> }
+        { name: 'Logout', path: '#', icon: <FaSignOutAlt className="mr-2" />, onClick: handleLogout }
     ]
 
     // Toggle dropdown visibility
@@ -49,7 +52,7 @@ function Header() {
     }
 
     // Listen for clicks outside
-    React.useEffect(() => {
+    useEffect(() => {
         document.addEventListener('click', handleClickOutside);
         return () => {
             document.removeEventListener('click', handleClickOutside);
@@ -95,9 +98,9 @@ function Header() {
                     ))}
 
                     {/* Show Profile Links if user is logged in, else show AuthLinks */}
-                    {user ? (
+                    {isLoggedIn ? (
                         ProfileLinks.map((item, index) => (
-                            <Link key={index} href={item.path}>
+                            <Link key={index} href={item.path} onClick={item.onClick}>
                                 <li className="text-base text-gray-600 font-medium hover:text-primary cursor-pointer transition-all ease-in-out transform hover:scale-105 py-1.5 px-4 rounded-md hover:bg-gray-100 flex items-center gap-x-1">
                                     {item.icon}
                                     {item.name}
@@ -132,7 +135,7 @@ function Header() {
                         <div className="absolute right-0 mt-2 w-60 bg-white shadow-md rounded-lg p-4 z-50 dropdown-menu">
                             <ul className="flex flex-col gap-1">
                                 {ProfileLinks.map((item, index) => (
-                                    <Link key={index} href={item.path}>
+                                    <Link key={index} href={item.path} onClick={item.onClick}>
                                         <li className="text-base text-gray-600 font-medium hover:text-primary cursor-pointer transition-all ease-in-out transform hover:scale-105 py-1.5 px-4 rounded-md hover:bg-gray-100 flex items-center gap-x-1">
                                             {item.icon}
                                             {item.name}
