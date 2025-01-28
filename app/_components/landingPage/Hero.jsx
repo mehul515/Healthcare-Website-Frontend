@@ -29,7 +29,7 @@ function Hero() {
             </p>
 
             <Link href={"/explore"} >
-              <Button className="mt-10">Eplore Now pls</Button>
+              <Button className="mt-10">Eplore Now</Button>
             </Link>
           </div>
         </div>

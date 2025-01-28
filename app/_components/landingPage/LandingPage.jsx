@@ -1,4 +1,5 @@
 import AboutUs from "./AboutUs";
+import CaregiverCTA from "./ApplyCareGiver";
 import CreateAccount from "./CreateAccount";
 import FAQ from "./FAQ";
 import Hero from "./Hero";
@@ -12,8 +13,9 @@ export default function LandingPage() {
     <div>
       <Hero/>
       <Services/>
-      <AboutUs/>
       <HowItWorks/>
+      <CaregiverCTA/>
+      <AboutUs/>
       <Testimonials/>
       <CreateAccount/>
       <FAQ/>

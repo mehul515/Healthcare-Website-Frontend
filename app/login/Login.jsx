@@ -7,7 +7,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios"; // Ensure axios is imported
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
-import { jsx } from "react/jsx-runtime";
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -15,8 +14,8 @@ export default function Login() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        const jwt = sessionStorage.getItem('jwt');
-        if (jwt) {
+        const token = localStorage.getItem('token');
+        if (token) {
             window.location.href = "/";
         }
     }, [])
@@ -26,23 +25,25 @@ export default function Login() {
         e.preventDefault(); // Prevent default form submission
 
         const userData = {
-            identifier: email,
+            email: email,
             password: password,
         };
 
         try {
             setLoading(true);
             // Send POST request to login the user
-            const response = await axios.post("http://localhost:1337/api/auth/local", userData);
+            const response = await axios.post("https://healthcare-website-backend.onrender.com/api/user/login", userData);
 
-            if (response.status === 200) {
-                console.log(response);
-                sessionStorage.setItem("user", JSON.stringify(response.data.user));
-                sessionStorage.setItem("jwt", response.data.jwt);
+            if (response.data.success) {
+                console.log(response.data);
+                localStorage.setItem("user", JSON.stringify(response.data.user));
+                localStorage.setItem("token", response.data.token);
                 toast.success("Login Successful")
                 setTimeout(() => {
                     window.location.href = "/"; // Redirect to homepage or dashboard
                 }, 500)
+            }else{
+                toast.error(response.data.message);
             }
         } catch (error) {
             console.log(error)
@@ -60,7 +61,7 @@ export default function Login() {
     return (
         <div className="flex font-medium justify-center min-h-[80vh] md:mt-20 mt-6">
             {/* Container */}
-            <Toaster />
+            <Toaster position="top-center" />
             <div className="bg-white rounded-lg flex w-full overflow-hidden">
                 {/* Left Section - Image */}
                 <div className="hidden md:flex justify-end items-center my-auto md:h-3/4 md:w-[50%]">

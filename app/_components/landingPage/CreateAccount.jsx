@@ -9,7 +9,7 @@ const CreateAccount = () => {
             <div className="max-w-7xl mx-auto p-6 flex flex-wrap items-center justify-center rounded-3xl overflow-hidden bg-slate-100">
 
                 {/* Image Section */}
-                <div className="w-full md:w-[45%] my-6 flex justify-center items-center">
+                <div className="hidden w-full md:w-[45%] my-6 md:flex justify-center items-center">
                     <Image
                         alt=""
                         width={400}

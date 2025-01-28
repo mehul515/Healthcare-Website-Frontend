@@ -20,7 +20,7 @@ const HowItWorks = () => {
 
     return (
         <section className="  mt-10 mb-6">
-            <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8 bg-gray-50 py-12 border-2 rounded-3xl">
+            <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8 bg-slate-100 py-12 rounded-3xl">
 
 
                 {/* Centered Heading */}

@@ -7,8 +7,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
+import { useRouter } from 'next/navigation'
 
 export default function SignUp() {
+    const router = useRouter()
     const [fname, setFname] = useState('');
     const [lname, setLname] = useState('');
     const [email, setEmail] = useState('');
@@ -17,8 +19,8 @@ export default function SignUp() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        const jwt = sessionStorage.getItem('jwt');
-        if (jwt) {
+        const token = localStorage.getItem('token');
+        if (token) {
             window.location.href = "/";
         }
     }, [])
@@ -28,7 +30,7 @@ export default function SignUp() {
 
         // Create the data object to send to the backend
         const userData = {
-            username: fname + " " + lname, // Combine first and last name as username
+            name: fname + " " + lname, // Combine first and last name as username
             email: email,
             password: password,
         };
@@ -37,16 +39,19 @@ export default function SignUp() {
             setLoading(true);
 
             // Send POST request to register the user
-            const response = await axios.post("http://localhost:1337/api/auth/local/register", userData);
+            const response = await axios.post("https://healthcare-website-backend.onrender.com/api/user/register", userData);
 
-            if (response.status === 200) {
+            if (response.data.success) {
                 console.log(response);
-                sessionStorage.setItem("user", JSON.stringify(response.data.user));
-                sessionStorage.setItem("jwt", response.data.jwt);
+                localStorage.setItem("user", JSON.stringify(response.data.user));
+                localStorage.setItem("token", response.data.token);
+                toast.success("User Sign Up Successful.");
                 setTimeout(() => {
-                    window.location.href = "/"; // Redirect to homepage or dashboard
+                    router.push("/user/profile/update"); // Redirect to homepage or dashboard
                 }, 500)
-                window.location.href = "/";
+            }else{
+                console.log(response)
+                toast.error(response.data.message)
             }
         } catch (error) {
             console.log(error)
@@ -66,7 +71,7 @@ export default function SignUp() {
 
     return (
         <div className="flex font-medium justify-center min-h-[80vh] md:mt-14 mt-6">
-            <Toaster />
+            <Toaster position="top-center" />
             {/* Container */}
             <div className="bg-white rounded-lg flex w-full overflow-hidden">
                 {/* Left Section - Image */}

@@ -16,7 +16,7 @@ export default function Home() {
     setIsClient(true);
 
     // Fetch user from sessionStorage
-    const storedUser = sessionStorage.getItem("user");
+    const storedUser = localStorage.getItem("user");
 
     if (storedUser) {
       setUser(JSON.parse(storedUser)); // Parse and set user data from sessionStorage
@@ -24,25 +24,7 @@ export default function Home() {
   }, []);
 
   const renderDashboard = () => {
-    switch (user?.userRole) {
-      case "patient":
-        return <PatientDashboard />;
-      case "doctor":
-        return <DoctorDashboard />;
-      case "caregiver":
-        return <CareGiver />;
-      case "admin":
-        return <AdminDashboard />;
-      default:
-        return (
-          <div className="flex flex-col items-center justify-center gap-4 min-h-[80vh]">
-            <h1 className="text-5xl font-bold text-red-600">Error!</h1>
-            <p className="text-2xl font-medium text-center text-gray-600">
-              User role not recognized. Please contact support.
-            </p>
-          </div>
-        );
-    }
+    return <PatientDashboard />;
   };
 
   // Client-side rendering check
